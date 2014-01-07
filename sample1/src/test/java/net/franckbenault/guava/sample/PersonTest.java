@@ -27,8 +27,23 @@ public class PersonTest {
 	}
 
 	@Test
-	public void test() {
-		//fail("Not yet implemented");
+	public void testEquals() {
+		Person p1 = new Person();
+		Object o1 = new Object();
+		
+		assertTrue(p1.equals(p1));
+
+		assertFalse(p1.equals(null));
+		assertFalse(p1.equals(o1));
+		
+	}
+	
+	@Test
+	public void testHashCode() {
+		Person p1 = new Person();
+		Person p2 = new Person();
+		
+		assertEquals(p1.hasCode(), p1.hasCode());		
 	}
 
 }
