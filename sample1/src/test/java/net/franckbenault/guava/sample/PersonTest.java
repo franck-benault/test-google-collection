@@ -10,8 +10,14 @@ import org.junit.Test;
 
 public class PersonTest {
 
+	private static Person p1;
+	private static Person p2;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		p1 = new Person(1, "p1");
+		p2 = new Person(2, "p2");
+	
 	}
 
 	@AfterClass
@@ -25,25 +31,25 @@ public class PersonTest {
 	@After
 	public void tearDown() throws Exception {
 	}
+	
 
 	@Test
 	public void testEquals() {
-		Person p1 = new Person();
 		Object o1 = new Object();
 		
 		assertTrue(p1.equals(p1));
 
 		assertFalse(p1.equals(null));
 		assertFalse(p1.equals(o1));
-		
+		assertFalse(p1.equals(p2));		
 	}
 	
 	@Test
 	public void testHashCode() {
-		Person p1 = new Person();
-		Person p2 = new Person();
+
 		
 		assertEquals(p1.hasCode(), p1.hasCode());		
+		assertFalse(p1.hasCode()==p2.hasCode());	
 	}
 
 }
