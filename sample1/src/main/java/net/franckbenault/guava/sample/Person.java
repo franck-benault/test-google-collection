@@ -1,13 +1,27 @@
 package net.franckbenault.guava.sample;
 
+import java.util.Date;
+
 public class Person {
 
 	private Integer id;
 	private String firstname;
+	private String lastname;
+	private Date birthday;
+	private Genre genre;
 	
-	public Person(Integer id, String firstname) {
+	
+	public Person(Integer id, 
+			String firstname, 
+			String lastname, 
+			Date birthday, 
+			Genre genre) {
 		this.id = id;
 		this.firstname = firstname;
+		this.lastname = lastname;
+		this.birthday = birthday;
+		this.genre = genre;
+		
 	}
 	
 	public int hasCode() {

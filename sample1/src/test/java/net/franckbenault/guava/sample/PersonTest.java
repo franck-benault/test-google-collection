@@ -2,6 +2,8 @@ package net.franckbenault.guava.sample;
 
 import static org.junit.Assert.*;
 
+import java.util.Date;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,8 +17,8 @@ public class PersonTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		p1 = new Person(1, "p1");
-		p2 = new Person(2, "p2");
+		p1 = new Person(1, "f1", "l1", new Date(), Genre.MALE );
+		p2 = new Person(2, "f2", "l2", new Date(), Genre.FEMALE );
 	
 	}
 
