@@ -2,6 +2,8 @@ package net.franckbenault.guava.sample;
 
 import java.util.Date;
 
+import com.google.common.base.Objects;
+
 public class Person {
 
 	private Integer id;
@@ -25,12 +27,8 @@ public class Person {
 	}
 	
 	public int hasCode() {
-		final int prime=31;
-		int result =1;
 		
-		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
-		
-		return result;
+		return Objects.hashCode(birthday, firstname, lastname);
 	}
 	
 	public boolean equals(Object obj) {
@@ -43,13 +41,9 @@ public class Person {
 		
 		Person other = (Person) obj;
 		
-		if(firstname==null) {
-			if(other.firstname!=null)
-				return false;
-		} else if (!firstname.equals(other.firstname))
-			return false;
-		
-		return true;
+		return Objects.equal(birthday, other.birthday) &&
+				Objects.equal(firstname, other.firstname) &&
+				Objects.equal(lastname, other.lastname);
 	}
 	
 }
