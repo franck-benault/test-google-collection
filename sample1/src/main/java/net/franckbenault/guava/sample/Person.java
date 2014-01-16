@@ -47,9 +47,10 @@ public class Person {
 	}
 	
 	public String toString() {
-		return "Person [firstname="+firstname+
-				", lastname="+lastname+
-				", genre="+genre;
+		return Objects.toStringHelper("Person")
+				.add("firstname", firstname)
+				.add("lastname", lastname)
+				.add("genre", genre).toString();
 	}
 	
 }

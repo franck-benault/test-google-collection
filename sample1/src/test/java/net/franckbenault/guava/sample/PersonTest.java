@@ -57,7 +57,7 @@ public class PersonTest {
 	@Test
 	public void testToString() {
 
-		
+		System.out.println(p1.toString());
 		assertNotNull(p1.toString());		
 		assertFalse(p1.toString().equals(p2.toString()));	
 	}
