@@ -46,4 +46,10 @@ public class Person {
 				Objects.equal(lastname, other.lastname);
 	}
 	
+	public String toString() {
+		return "Person [firstname="+firstname+
+				", lastname="+lastname+
+				", genre="+genre;
+	}
+	
 }

@@ -54,4 +54,13 @@ public class PersonTest {
 		assertFalse(p1.hasCode()==p2.hasCode());	
 	}
 
+	@Test
+	public void testToString() {
+
+		
+		assertNotNull(p1.toString());		
+		assertFalse(p1.toString().equals(p2.toString()));	
+	}
+
+	
 }
