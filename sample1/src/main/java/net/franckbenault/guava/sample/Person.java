@@ -3,6 +3,7 @@ package net.franckbenault.guava.sample;
 import java.util.Date;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.ComparisonChain;
 
 public class Person implements Comparable<Person> {
 
@@ -55,18 +56,13 @@ public class Person implements Comparable<Person> {
 
 	@Override
 	public int compareTo(Person other) {
-		int result = firstname.compareTo(other.firstname);
-		if(result!=0) {
-			return result;
-		}
 		
-		result = lastname.compareTo(other.lastname);
-		if(result!=0) {
-			return result;
-		}
-		
-		result = birthday.compareTo(other.birthday);
-		return result;
+		return ComparisonChain.start()
+				.compare(firstname,other.firstname)
+				.compare(lastname,other.lastname)
+				.compare(birthday,other.birthday)
+				.result();
+
 	}
 	
 }
