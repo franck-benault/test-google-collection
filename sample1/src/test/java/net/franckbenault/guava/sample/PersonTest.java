@@ -62,5 +62,13 @@ public class PersonTest {
 		assertFalse(p1.toString().equals(p2.toString()));	
 	}
 
-	
+
+	@Test
+	public void testCompareTog() {
+
+		assertEquals(p1.compareTo(p1), 0);	
+		assertEquals(p2.compareTo(p2), 0);	
+		assertEquals(p1.compareTo(p2), -1);	
+		assertEquals(p2.compareTo(p1), 1);	
+	}
 }

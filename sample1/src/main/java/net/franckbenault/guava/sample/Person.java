@@ -4,7 +4,7 @@ import java.util.Date;
 
 import com.google.common.base.Objects;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
 	private Integer id;
 	private String firstname;
@@ -51,6 +51,22 @@ public class Person {
 				.add("firstname", firstname)
 				.add("lastname", lastname)
 				.add("genre", genre).toString();
+	}
+
+	@Override
+	public int compareTo(Person other) {
+		int result = firstname.compareTo(other.firstname);
+		if(result!=0) {
+			return result;
+		}
+		
+		result = lastname.compareTo(other.lastname);
+		if(result!=0) {
+			return result;
+		}
+		
+		result = birthday.compareTo(other.birthday);
+		return result;
 	}
 	
 }
