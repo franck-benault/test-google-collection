@@ -19,6 +19,13 @@ public class Person implements Comparable<Person> {
 			String lastname, 
 			Date birthday, 
 			Genre genre) {
+		
+		if(firstname==null)
+			throw new NullPointerException("firstname must not be null");
+
+		if(lastname==null)
+			throw new NullPointerException("lastname must not be null");
+		
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;

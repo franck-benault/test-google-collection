@@ -35,6 +35,21 @@ public class PersonTest {
 	}
 	
 
+	@Test(expected=NullPointerException.class)
+	public void testPersonException1() {
+		new Person(1, null, "l1", new Date(), Genre.MALE );	
+	}
+
+	@Test(expected=NullPointerException.class)
+	public void testPersonException2() {
+		new Person(1, "f1", null, new Date(), Genre.MALE );	
+	}
+	
+	@Test
+	public void testPerson() {
+		new Person(1, "f1", "l1", new Date(), Genre.MALE );		
+	}
+	
 	@Test
 	public void testEquals() {
 		Object o1 = new Object();
