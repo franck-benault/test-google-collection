@@ -14,11 +14,11 @@ public class Person implements Comparable<Person> {
 	private Genre genre;
 	
 	
-	public Person(Integer id, 
-			String firstname, 
-			String lastname, 
-			Date birthday, 
-			Genre genre) {
+	public Person(final Integer id, 
+			final String firstname, 
+			final String lastname, 
+			final Date birthday, 
+			final Genre genre) {
 		
 		if(firstname==null)
 			throw new NullPointerException("firstname must not be null");
@@ -26,6 +26,9 @@ public class Person implements Comparable<Person> {
 		if(lastname==null)
 			throw new NullPointerException("lastname must not be null");
 		
+		if(birthday==null)
+			throw new NullPointerException("birthday must not be null");
+			
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;

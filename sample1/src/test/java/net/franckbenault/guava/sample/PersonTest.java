@@ -36,13 +36,18 @@ public class PersonTest {
 	
 
 	@Test(expected=NullPointerException.class)
-	public void testPersonException1() {
+	public void testPersonNullPointerExceptionFirstname() {
 		new Person(1, null, "l1", new Date(), Genre.MALE );	
 	}
 
 	@Test(expected=NullPointerException.class)
-	public void testPersonException2() {
+	public void testPersonNullPointerExceptionLastname() {
 		new Person(1, "f1", null, new Date(), Genre.MALE );	
+	}
+
+	@Test(expected=NullPointerException.class)
+	public void testPersonNullPointerExceptionBirthday() {
+		new Person(1, "f1", "l1", null, Genre.MALE );	
 	}
 	
 	@Test
