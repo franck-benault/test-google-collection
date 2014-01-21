@@ -3,6 +3,7 @@ package net.franckbenault.guava.sample;
 import java.util.Date;
 
 import com.google.common.base.Objects;
+import static com.google.common.base.Preconditions.checkNotNull;
 import com.google.common.collect.ComparisonChain;
 
 public class Person implements Comparable<Person> {
@@ -20,8 +21,8 @@ public class Person implements Comparable<Person> {
 			final Date birthday, 
 			final Genre genre) {
 		
-		if(firstname==null)
-			throw new NullPointerException("firstname must not be null");
+		//if(firstname==null)
+		//	throw new NullPointerException("firstname must not be null");
 
 		if(lastname==null)
 			throw new NullPointerException("lastname must not be null");
@@ -30,8 +31,8 @@ public class Person implements Comparable<Person> {
 			throw new NullPointerException("birthday must not be null");
 			
 		this.id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
+		this.firstname = checkNotNull(firstname, "firstname must not be null");
+		this.lastname = checkNotNull(lastname, "lastname must not be null");
 		this.birthday = birthday;
 		this.genre = genre;
 		
