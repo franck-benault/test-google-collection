@@ -49,6 +49,11 @@ public class PersonTest {
 	public void testPersonNullPointerExceptionBirthday() {
 		new Person(1, "f1", "l1", null, Genre.MALE );	
 	}
+
+	@Test(expected=NullPointerException.class)
+	public void testPersonNullPointerExceptionGenre() {
+		new Person(1, "f1", "l1", new Date(), null );	
+	}
 	
 	@Test
 	public void testPerson() {

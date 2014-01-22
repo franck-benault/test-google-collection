@@ -21,20 +21,12 @@ public class Person implements Comparable<Person> {
 			final Date birthday, 
 			final Genre genre) {
 		
-		//if(firstname==null)
-		//	throw new NullPointerException("firstname must not be null");
 
-		if(lastname==null)
-			throw new NullPointerException("lastname must not be null");
-		
-		if(birthday==null)
-			throw new NullPointerException("birthday must not be null");
-			
 		this.id = id;
-		this.firstname = checkNotNull(firstname, "firstname must not be null");
-		this.lastname = checkNotNull(lastname, "lastname must not be null");
-		this.birthday = birthday;
-		this.genre = genre;
+		this.firstname = checkNotNull(firstname, "Firstname must not be null");
+		this.lastname = checkNotNull(lastname, "Lastname must not be null");
+		this.birthday = checkNotNull(birthday, "Birthday must not be null");
+		this.genre = checkNotNull(genre, "Genre must not be null");
 		
 	}
 	
