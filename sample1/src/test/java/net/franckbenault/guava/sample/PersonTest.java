@@ -17,8 +17,8 @@ public class PersonTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		p1 = new Person(1, "f1", "l1", new Date(), Genre.MALE );
-		p2 = new Person(2, "f2", "l2", new Date(), Genre.FEMALE );
+		p1 = new Person(1, "f1", "l1", new Date(), Genre.MALE , 80 );
+		p2 = new Person(2, "f2", "l2", new Date(), Genre.FEMALE, 65 );
 	
 	}
 
@@ -37,27 +37,33 @@ public class PersonTest {
 
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionFirstname() {
-		new Person(1, null, "l1", new Date(), Genre.MALE );	
+		new Person(1, null, "l1", new Date(), Genre.MALE , 80);	
 	}
 
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionLastname() {
-		new Person(1, "f1", null, new Date(), Genre.MALE );	
+		new Person(1, "f1", null, new Date(), Genre.MALE , 80);	
 	}
 
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionBirthday() {
-		new Person(1, "f1", "l1", null, Genre.MALE );	
+		new Person(1, "f1", "l1", null, Genre.MALE , 80);	
 	}
 
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionGenre() {
-		new Person(1, "f1", "l1", new Date(), null );	
+		new Person(1, "f1", "l1", new Date(), null , 80);	
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testPersonIllegalArgumentExceptionWeight() {
+		new Person(1, "f1", "l1", new Date(), Genre.MALE , 0);	
+	}
+	
 	
 	@Test
 	public void testPerson() {
-		new Person(1, "f1", "l1", new Date(), Genre.MALE );		
+		new Person(1, "f1", "l1", new Date(), Genre.MALE ,80 );		
 	}
 	
 	@Test

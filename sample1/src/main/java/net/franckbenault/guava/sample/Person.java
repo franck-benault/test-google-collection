@@ -4,6 +4,7 @@ import java.util.Date;
 
 import com.google.common.base.Objects;
 import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.base.Preconditions.checkArgument;
 import com.google.common.collect.ComparisonChain;
 
 public class Person implements Comparable<Person> {
@@ -13,13 +14,14 @@ public class Person implements Comparable<Person> {
 	private String lastname;
 	private Date birthday;
 	private Genre genre;
-	
+	private double weight;
 	
 	public Person(final Integer id, 
 			final String firstname, 
 			final String lastname, 
 			final Date birthday, 
-			final Genre genre) {
+			final Genre genre,
+			final double weight) {
 		
 
 		this.id = id;
@@ -27,7 +29,9 @@ public class Person implements Comparable<Person> {
 		this.lastname = checkNotNull(lastname, "Lastname must not be null");
 		this.birthday = checkNotNull(birthday, "Birthday must not be null");
 		this.genre = checkNotNull(genre, "Genre must not be null");
-		
+		checkArgument(weight>0, "Weight must not be negative");
+		this.weight = weight;
+
 	}
 	
 	public int hasCode() {
