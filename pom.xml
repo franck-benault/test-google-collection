@@ -11,6 +11,7 @@
 		<module>jpa-hibernate</module-->
 		<module>sample1</module>
 		<module>sample2</module>
+		<module>perf1</module>
 	</modules>
 	
 	<properties>
