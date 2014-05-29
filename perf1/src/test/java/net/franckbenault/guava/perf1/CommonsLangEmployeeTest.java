@@ -128,7 +128,7 @@ public class CommonsLangEmployeeTest {
 		for(int i=0; i<10; i++) {
 			duree += myThirdTest();
 		}
-		System.out.println("Commons lang ==>"+duree/1000000);
+		System.out.println("Commons lang equals ==>"+duree/1000000);
 	}
 
 }
