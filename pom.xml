@@ -6,9 +6,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<!-- module>sample1</module-->
-		<!--  module>simple-singleton</module>
-		<module>jpa-hibernate</module-->
 		<module>sample1</module>
 		<module>sample2</module>
 		<module>perf1</module>
