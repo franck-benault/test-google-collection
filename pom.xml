@@ -9,6 +9,7 @@
 		<module>sample1</module>
 		<module>sample2</module>
 		<module>perf1</module>
+		<module>veryfirstexample</module>
 	</modules>
 	
 	<properties>
