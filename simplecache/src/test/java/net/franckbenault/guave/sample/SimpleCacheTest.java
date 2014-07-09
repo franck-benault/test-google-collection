@@ -9,11 +9,12 @@ import org.junit.Test;
 public class SimpleCacheTest {
 
 	@Test
-	public void testCache() throws ExecutionException {
+	public void testCache() {
 
-
-		String res = SimpleCache.cache.get("simple test");
+		assertEquals(SimpleCache.cache.size(),0);
+		String res = SimpleCache.cache.getUnchecked("simple test");
 		assertNotNull(res);
+		assertEquals(SimpleCache.cache.size(),1);
 	}
 
 }
