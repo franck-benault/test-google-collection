@@ -2,7 +2,9 @@ package net.franckbenault.guava.sample;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -12,7 +14,7 @@ public class VerySimpleExampleTest {
 	public void testSplitJava() {
 		String[] output =VerySimpleExample.splitJava(" foo, ,bar, quux,");
 		System.out.println(output);
-		
+				
 		assertEquals(" foo",output[0]);		
 		assertEquals(output.length,4);
 	}
