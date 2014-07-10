@@ -31,6 +31,8 @@ public class CacheWithExceptionTest {
 		} catch (ExecutionException e) {
 			assertTrue(e.getCause() instanceof IOException);
 		}
+		
+
 	}
 
 }
