@@ -2,19 +2,20 @@ package net.franckbenault.guave.sample;
 
 import static org.junit.Assert.*;
 
-import java.util.concurrent.ExecutionException;
-
 import org.junit.Test;
 
 public class SimpleCacheTest {
 
+
 	@Test
 	public void testCache() {
 
-		assertEquals(SimpleCache.cache.size(),0);
-		String res = SimpleCache.cache.getUnchecked("simple test");
+		SimpleCache simpleCache = new SimpleCache();
+		
+		assertEquals(simpleCache.cache.size(),0);
+		String res = simpleCache.cache.getUnchecked("simple test");
 		assertNotNull(res);
-		assertEquals(SimpleCache.cache.size(),1);
+		assertEquals(simpleCache.cache.size(),1);
 	}
 
 }

@@ -1,15 +1,20 @@
 package net.franckbenault.guave.sample;
 
+import java.io.IOException;
+
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
-public class SimpleCache {
+public class CacheWithException {
 
 	
 	public CacheLoader<String,String> loader = new CacheLoader<String,String>() {
-		public String load(String key) {
-			return key.toUpperCase();
+		public String load(String key) throws IOException {
+			if(key.startsWith("Exception"))
+				throw new IOException("IOException");
+			else
+				return key.toUpperCase();
 		}
 	};
 
