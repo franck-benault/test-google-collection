@@ -1,6 +1,6 @@
 package net.franckbenault.guava.sample;
 
-public class SampleWithCurrentTimeMillis {
+public class SampleWithNanoTime {
 
 
 	
@@ -26,19 +26,19 @@ public class SampleWithCurrentTimeMillis {
 	}
 	
 	public static long longProcess() {
-		System.out.println("SampleWithCurrentTimeMillis");
-		
-		final long date1 = System.currentTimeMillis();
+		System.out.println("SampleWithNanoTime");
+		final long ten6 = 1000000;
+		final long date1 = System.nanoTime();
 		
 		subProcess1();
-		final long date2 = System.currentTimeMillis();
-		System.out.println("subprocess1 "+(date2-date1));
+		final long date2 = System.nanoTime();
+		System.out.println("subprocess1 "+(date2-date1)/ten6);
 		
 		subProcess2();
-		final long date3 = System.currentTimeMillis();
-		System.out.println("subprocess1 "+(date3-date2));
+		final long date3 = System.nanoTime();
+		System.out.println("subprocess1 "+(date3-date2)/ten6);
 		
-		return date3-date1;
+		return (date3-date1)/ten6;
 		
 	}
 	
