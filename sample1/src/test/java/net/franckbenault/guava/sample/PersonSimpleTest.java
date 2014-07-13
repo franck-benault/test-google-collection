@@ -34,6 +34,30 @@ public class PersonSimpleTest {
 	public void tearDown() throws Exception {
 	}
 	
+	@Test(expected=NullPointerException.class)
+	public void testPersonNullPointerExceptionFirstname() {
+		new PersonSimple(1, null, "l1", new Date(), Gender.MALE , 80);	
+	}
+
+	@Test(expected=NullPointerException.class)
+	public void testPersonNullPointerExceptionLastname() {
+		new PersonSimple(1, "f1", null, new Date(), Gender.MALE , 80);	
+	}
+
+	@Test(expected=NullPointerException.class)
+	public void testPersonNullPointerExceptionBirthday() {
+		new PersonSimple(1, "f1", "l1", null, Gender.MALE , 80);	
+	}
+
+	@Test(expected=NullPointerException.class)
+	public void testPersonNullPointerExceptionGenre() {
+		new PersonSimple(1, "f1", "l1", new Date(), null , 80);	
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testPersonIllegalArgumentExceptionWeight() {
+		new PersonSimple(1, "f1", "l1", new Date(), Gender.MALE , 0);	
+	}
 	
 	
 	@Test

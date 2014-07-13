@@ -1,5 +1,6 @@
 package net.franckbenault.guava.sample;
 
+
 import java.util.Date;
 
 
@@ -20,12 +21,30 @@ public class PersonSimple implements Comparable<PersonSimple> {
 			final Gender gender,
 			final double weight) {
 		
-
 		this.id = id;
+
+		if(firstname==null)
+			throw new NullPointerException("Firstname must not be null");		
 		this.firstname = firstname;
+
+		if(lastname==null)
+			throw new NullPointerException("Lastname must not be null");		
+
 		this.lastname = lastname;
+
+		if(birthday==null)
+			throw new NullPointerException("Birthday must not be null");
+
 		this.birthday = birthday;
+
+		if(gender==null)
+			throw new NullPointerException("Gender must not be null");
+
 		this.gender = gender;
+
+		if(weight<=0)
+			throw new IllegalArgumentException("Weight must not be negative");
+
 		this.weight = weight;
 
 	}
@@ -80,13 +99,14 @@ public class PersonSimple implements Comparable<PersonSimple> {
 		
 		StringBuilder builder = new StringBuilder();
 		
-		builder.append("Person [firstname=");
+		builder.append("Person{firstname=");
 		builder.append(firstname);
 		builder.append(", lastname=");
 		builder.append(lastname);
-		builder.append(", gender");
+		builder.append(", gender=");
 		builder.append(gender);
-
+		builder.append("}");
+		
 		return builder.toString();
 		
 		
