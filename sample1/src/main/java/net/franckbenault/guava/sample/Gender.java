@@ -1,6 +1,6 @@
 package net.franckbenault.guava.sample;
 
-public enum Genre {
+public enum Gender {
 	MALE,
 	FEMALE;
 }

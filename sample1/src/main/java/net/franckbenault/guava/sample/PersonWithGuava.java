@@ -7,20 +7,20 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkArgument;
 import com.google.common.collect.ComparisonChain;
 
-public class Person implements Comparable<Person> {
+public class PersonWithGuava implements Comparable<PersonWithGuava> {
 
 	private Integer id;
 	private String firstname;
 	private String lastname;
 	private Date birthday;
-	private Genre genre;
+	private Gender gender;
 	private double weight;
 	
-	public Person(final Integer id, 
+	public PersonWithGuava(final Integer id, 
 			final String firstname, 
 			final String lastname, 
 			final Date birthday, 
-			final Genre genre,
+			final Gender gender,
 			final double weight) {
 		
 
@@ -28,7 +28,7 @@ public class Person implements Comparable<Person> {
 		this.firstname = checkNotNull(firstname, "Firstname must not be null");
 		this.lastname = checkNotNull(lastname, "Lastname must not be null");
 		this.birthday = checkNotNull(birthday, "Birthday must not be null");
-		this.genre = checkNotNull(genre, "Genre must not be null");
+		this.gender = checkNotNull(gender, "Gender must not be null");
 		checkArgument(weight>0, "Weight must not be negative");
 		this.weight = weight;
 
@@ -47,7 +47,7 @@ public class Person implements Comparable<Person> {
 		if(this.getClass()!=obj.getClass())
 			return false;
 		
-		Person other = (Person) obj;
+		PersonWithGuava other = (PersonWithGuava) obj;
 		
 		return Objects.equal(birthday, other.birthday) &&
 				Objects.equal(firstname, other.firstname) &&
@@ -58,11 +58,11 @@ public class Person implements Comparable<Person> {
 		return Objects.toStringHelper("Person")
 				.add("firstname", firstname)
 				.add("lastname", lastname)
-				.add("genre", genre).toString();
+				.add("gender", gender).toString();
 	}
 
 	@Override
-	public int compareTo(Person other) {
+	public int compareTo(PersonWithGuava other) {
 		
 		return ComparisonChain.start()
 				.compare(firstname,other.firstname)
