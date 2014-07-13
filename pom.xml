@@ -11,6 +11,7 @@
 		<module>perf1</module>
 		<module>veryfirstexample</module>
 		<module>simplecache</module>
+		<module>performanceMesure</module>
 	</modules>
 	
 	<properties>
