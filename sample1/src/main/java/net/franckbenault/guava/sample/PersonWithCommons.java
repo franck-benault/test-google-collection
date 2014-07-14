@@ -3,9 +3,12 @@ package net.franckbenault.guava.sample;
 
 import java.util.Date;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
-public class PersonSimple implements Comparable<PersonSimple> {
+
+public class PersonWithCommons implements Comparable<PersonWithCommons> {
 
 	private Integer id;
 	private String firstname;
@@ -14,7 +17,7 @@ public class PersonSimple implements Comparable<PersonSimple> {
 	private Gender gender;
 	private double weight;
 	
-	public PersonSimple(final Integer id, 
+	public PersonWithCommons(final Integer id, 
 			final String firstname, 
 			final String lastname, 
 			final Date birthday, 
@@ -49,52 +52,30 @@ public class PersonSimple implements Comparable<PersonSimple> {
 
 	}
 	
+
 	public int hashCode() {
-		final int prime = 31;
-		int result =1;
-		
-		result = prime * result + ((birthday==null ? 0 : birthday.hashCode()));
-		result = prime * result + ((firstname==null ? 0 : firstname.hashCode()));
-		result = prime * result + ((lastname==null ? 0 : lastname.hashCode()));
-		
-		return result; 
+		return new HashCodeBuilder()
+		        .append(birthday)
+		        .append(firstname)
+		        .append(lastname)
+		        .toHashCode();
 	}
-	
+
+	@Override
 	public boolean equals(Object obj) {
-		if(this==obj)
-			return true;
-		if(obj==null)
-			return false;
-		if(this.getClass()!=obj.getClass())
-			return false;
-		
-		PersonSimple other = (PersonSimple) obj;
-		
-		if(birthday==null) {
-			if (other.birthday != null) {
-				return false;
-			}
-		} else if(!birthday.equals(other.birthday))
-			return false;
-		
-		if(firstname==null) {
-			if (other.firstname != null) {
-				return false;
-			}
-		} else if(!firstname.equals(other.firstname))
-			return false;
-
-		if(lastname==null) {
-			if (other.lastname != null) {
-				return false;
-			}
-		} else if(!lastname.equals(other.lastname))
-			return false;
-
-		return true;
-		
+		   if(obj instanceof PersonWithCommons){
+		        final PersonWithCommons other = (PersonWithCommons) obj;
+		        return new EqualsBuilder()
+		            .append(birthday, other.birthday)
+		            .append(firstname, other.firstname)
+		            .append(lastname, other.lastname)
+		            .isEquals();
+		    } else{
+		        return false;
+		    }
 	}
-	
+
+		
 	public String toString() {
 		
 		StringBuilder builder = new StringBuilder();
@@ -114,7 +95,7 @@ public class PersonSimple implements Comparable<PersonSimple> {
 	}
 
 	@Override
-	public int compareTo(PersonSimple other) {
+	public int compareTo(PersonWithCommons other) {
 		
 		int result = firstname.compareTo(other.firstname);
 		if(result!=0) {
@@ -131,5 +112,9 @@ public class PersonSimple implements Comparable<PersonSimple> {
 
 
 	}
+
+
+
+
 	
 }

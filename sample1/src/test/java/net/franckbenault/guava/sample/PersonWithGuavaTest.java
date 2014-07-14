@@ -81,8 +81,8 @@ public class PersonWithGuavaTest {
 	public void testHashCode() {
 
 		
-		assertEquals(p1.hasCode(), p1.hasCode());		
-		assertFalse(p1.hasCode()==p2.hasCode());	
+		assertEquals(p1.hashCode(), p1.hashCode());		
+		assertFalse(p1.hashCode()==p2.hashCode());	
 	}
 
 	@Test

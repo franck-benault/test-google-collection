@@ -10,15 +10,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class PersonSimpleTest {
+public class PersonSimpleWithCommonsTest {
 
-	private static PersonSimple p1;
-	private static PersonSimple p2;
+	private static PersonWithCommons p1;
+	private static PersonWithCommons p2;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		p1 = new PersonSimple(1, "f1", "l1", new Date(), Gender.MALE , 80 );
-		p2 = new PersonSimple(2, "f2", "l2", new Date(), Gender.FEMALE, 65 );
+		p1 = new PersonWithCommons(1, "f1", "l1", new Date(), Gender.MALE , 80 );
+		p2 = new PersonWithCommons(2, "f2", "l2", new Date(), Gender.FEMALE, 65 );
 	
 	}
 
@@ -36,33 +36,33 @@ public class PersonSimpleTest {
 	
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionFirstname() {
-		new PersonSimple(1, null, "l1", new Date(), Gender.MALE , 80);	
+		new PersonWithCommons(1, null, "l1", new Date(), Gender.MALE , 80);	
 	}
 
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionLastname() {
-		new PersonSimple(1, "f1", null, new Date(), Gender.MALE , 80);	
+		new PersonWithCommons(1, "f1", null, new Date(), Gender.MALE , 80);	
 	}
 
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionBirthday() {
-		new PersonSimple(1, "f1", "l1", null, Gender.MALE , 80);	
+		new PersonWithCommons(1, "f1", "l1", null, Gender.MALE , 80);	
 	}
 
 	@Test(expected=NullPointerException.class)
 	public void testPersonNullPointerExceptionGenre() {
-		new PersonSimple(1, "f1", "l1", new Date(), null , 80);	
+		new PersonWithCommons(1, "f1", "l1", new Date(), null , 80);	
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void testPersonIllegalArgumentExceptionWeight() {
-		new PersonSimple(1, "f1", "l1", new Date(), Gender.MALE , 0);	
+		new PersonWithCommons(1, "f1", "l1", new Date(), Gender.MALE , 0);	
 	}
 	
 	
 	@Test
 	public void testPerson() {
-		new PersonSimple(1, "f1", "l1", new Date(), Gender.MALE ,80 );		
+		new PersonWithCommons(1, "f1", "l1", new Date(), Gender.MALE ,80 );		
 	}
 	
 	@Test
@@ -78,10 +78,9 @@ public class PersonSimpleTest {
 	
 	@Test
 	public void testHashCode() {
-
-		
+	
 		assertEquals(p1.hashCode(), p1.hashCode());		
-		assertFalse(p1.hashCode()==p2.hashCode());	
+		assertFalse(p1.hashCode()==p2.hashCode());
 	}
 
 	@Test

@@ -34,7 +34,7 @@ public class PersonWithGuava implements Comparable<PersonWithGuava> {
 
 	}
 	
-	public int hasCode() {
+	public int hashCode() {
 		
 		return Objects.hashCode(birthday, firstname, lastname);
 	}
