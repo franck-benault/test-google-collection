@@ -3,6 +3,7 @@ package net.franckbenault.guava.sample;
 
 import java.util.Date;
 
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -63,16 +64,23 @@ public class PersonWithCommons implements Comparable<PersonWithCommons> {
 
 	@Override
 	public boolean equals(Object obj) {
-		   if(obj instanceof PersonWithCommons){
-		        final PersonWithCommons other = (PersonWithCommons) obj;
-		        return new EqualsBuilder()
-		            .append(birthday, other.birthday)
-		            .append(firstname, other.firstname)
-		            .append(lastname, other.lastname)
-		            .isEquals();
-		    } else{
-		        return false;
-		    }
+		
+		if(this==obj)
+			return true;
+		if(obj==null)
+			return false;
+		if(this.getClass()!=obj.getClass())
+			return false;
+		
+        final PersonWithCommons other = (PersonWithCommons) obj;		
+		
+		
+        return new EqualsBuilder()
+            .append(birthday, other.birthday)
+            .append(firstname, other.firstname)
+            .append(lastname, other.lastname)
+            .isEquals();
+		
 	}
 
 		
@@ -96,6 +104,7 @@ public class PersonWithCommons implements Comparable<PersonWithCommons> {
 
 	@Override
 	public int compareTo(PersonWithCommons other) {
+		
 		
 		int result = firstname.compareTo(other.firstname);
 		if(result!=0) {
