@@ -33,7 +33,6 @@ public class SetUsage {
 	}
 	
 	public Set<Integer> getMult2Or3View() {
-		
 		return Sets.union(mult2, mult3);
 	}
 }
