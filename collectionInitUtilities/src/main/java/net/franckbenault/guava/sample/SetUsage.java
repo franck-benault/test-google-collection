@@ -27,8 +27,13 @@ public class SetUsage {
 		mult3.add(12);
 	}
 	
-	public Set<Integer> getMult6() {
+	public Set<Integer> getMult6View() {
 		
 		return Sets.intersection(mult2, mult3);
+	}
+	
+	public Set<Integer> getMult2Or3View() {
+		
+		return Sets.union(mult2, mult3);
 	}
 }
