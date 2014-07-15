@@ -12,6 +12,7 @@
 		<module>veryfirstexample</module>
 		<module>simplecache</module>
 		<module>performanceMesure</module>
+		<module>collectionInitUtilities</module>
 	</modules>
 	
 	<properties>
