@@ -10,6 +10,9 @@ public class CollectionUsageTest {
 	public void testObject() {
 		assertNotNull(CollectionUsage.lookup);
 		assertTrue(CollectionUsage.lookup.isEmpty());
+
+		assertNotNull(CollectionUsage.lookup2);
+		assertTrue(CollectionUsage.lookup2.isEmpty());
 	}
 
 }
