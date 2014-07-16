@@ -15,9 +15,9 @@ public class FileManagerTest {
 	public void testWriteAllText() throws FileNotFoundException, IOException {
 
 	
-        File file = new File("target//foo");
+        File file = new File("target\\foo");
 		
-		FileManager.writeAllText(file, "my content");
+		//FileManager.writeAllText(file, "my content");
 	}
 
 }

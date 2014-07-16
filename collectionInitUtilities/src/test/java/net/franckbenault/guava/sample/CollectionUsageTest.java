@@ -13,6 +13,14 @@ public class CollectionUsageTest {
 
 		assertNotNull(CollectionUsage.lookup2);
 		assertTrue(CollectionUsage.lookup2.isEmpty());
+		
+
+		CollectionUsage.colors.add("rod");
+		CollectionUsage.colors.add("rod1");
+		CollectionUsage.colors.add("rod2");
+		CollectionUsage.colors.add("rod3");
+
+		CollectionUsage.colors.add("rod4");
 	}
 
 }
