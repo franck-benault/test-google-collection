@@ -13,6 +13,7 @@
 		<module>simplecache</module>
 		<module>performanceMesure</module>
 		<module>collectionInitUtilities</module>
+		<module>multimapBimap</module>
 	</modules>
 	
 	<properties>
