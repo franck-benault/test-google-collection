@@ -10,6 +10,10 @@ public class MultimapUsage {
 		
 		Multimap<String,Integer> scores = HashMultimap.create(); 
 		
+		scores.put("Bob", 20);
+		scores.put("Bob", 10);
+		scores.put("Bob", 15);
+		
 		return scores;
 		
 	}
