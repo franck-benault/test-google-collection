@@ -32,6 +32,7 @@ public class PersonWithGuava implements Comparable<PersonWithGuava> {
 		checkArgument(weight>0, "Weight must not be negative");
 		this.weight = weight;
 
+
 	}
 	
 	public int hashCode() {

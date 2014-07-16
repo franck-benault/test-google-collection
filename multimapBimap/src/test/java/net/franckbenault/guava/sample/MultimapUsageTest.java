@@ -17,6 +17,7 @@ public class MultimapUsageTest {
 		assertNotNull(scores);
 		assertEquals(scores.size(),3);
 		assertTrue(Collections.max(scores.get("Bob"))==20);
+		
 	}
 
 }
