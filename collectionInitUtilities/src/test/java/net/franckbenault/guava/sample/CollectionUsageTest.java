@@ -16,4 +16,11 @@ public class CollectionUsageTest {
 		
 	}
 
+	
+	@Test(expected=UnsupportedOperationException.class)
+	public void testImmutableMap() {
+			
+		
+		CollectionUsage.codeColor.put("color", "myValue");
+	}
 }

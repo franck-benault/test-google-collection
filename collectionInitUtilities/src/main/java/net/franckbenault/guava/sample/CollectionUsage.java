@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Lists;
 
@@ -19,5 +20,13 @@ public class CollectionUsage {
 	
 	//init of List in one line
 	public List<String> rawbow = Lists.newArrayList("red", "white", "green", "black");
+	
+	
+	
+	public static Map<String, String> codeColor = new ImmutableMap.Builder<String,String>()
+			.put("red", "FF0000")
+			.put("green", "00FF00")
+			.build();
+	
 	
 }
