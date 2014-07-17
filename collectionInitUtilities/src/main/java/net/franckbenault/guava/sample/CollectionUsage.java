@@ -18,6 +18,6 @@ public class CollectionUsage {
 	public static final Map<String, Map<String,Integer>> lookup2 = new HashMap<>();
 	
 	//init of List in one line
-	List<String> rawbow = Lists.newArrayList("red", "white", "green", "black");
+	public List<String> rawbow = Lists.newArrayList("red", "white", "green", "black");
 	
 }
