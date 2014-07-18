@@ -47,4 +47,20 @@ public class ImmutableSampleTest {
 
 	}
 
+	
+	@Test
+	public void testGetGuavaImmutable2() {
+		ImmutableSample sample = new ImmutableSample();
+		List<String> immutable = sample.getGuavaImmutable2();
+		assertEquals(immutable.size(),6);
+		
+		try {
+			immutable.add("new color");
+			fail("exception expected");
+		} catch (Exception e) {
+			//ok
+		}
+	
+
+	}
 }

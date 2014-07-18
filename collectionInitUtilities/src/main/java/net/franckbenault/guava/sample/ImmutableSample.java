@@ -21,4 +21,9 @@ public class ImmutableSample {
 		
 		return ImmutableList.copyOf(colors);
 	}
+	
+	public List<String> getGuavaImmutable2() {
+		
+		return ImmutableList.of("red", "white", "black", "blue", "green", "yellow");
+	}
 }
