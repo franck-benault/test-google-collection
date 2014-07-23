@@ -15,6 +15,7 @@
 		<module>collectionInitUtilities</module>
 		<module>multimapBimap</module>
 		<module>preconditions</module>
+		<module>joinerAndSplitter</module>
 	</modules>
 	
 	<properties>
