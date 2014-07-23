@@ -10,7 +10,7 @@ public class SmsSample {
 	
 	public String convertToIntermediateFileContent() {
 		
-		List<String> fields = Lists.newArrayList("one", null, "three", "four", null);
+		List<String> fields = Lists.newArrayList(null,"one", null, "three", "four", null);
 		
 		String res = Joiner.on(":")	
 			//.useForNull("")
