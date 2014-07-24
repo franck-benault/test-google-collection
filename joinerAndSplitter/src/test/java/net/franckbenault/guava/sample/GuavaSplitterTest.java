@@ -38,6 +38,7 @@ public class GuavaSplitterTest {
 		Iterable<String> i = GuavaSplitter.stringToInteratorWithLimit3("one,two,three,four");
 		assertEquals(Iterables.size(i),3);
 		assertTrue(Iterables.contains(i,"one"));
+		assertTrue(Iterables.contains(i,"three,four"));
 	}
 	
 }
