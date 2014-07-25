@@ -14,6 +14,12 @@ public class GuavaCharMatcherTest {
 	}
 
 	@Test
+	public void testCountFigure() {
+		int res = GuavaCharMatcher.countFigure("aZas34r");
+		assertEquals(res, 2);
+	}
+	
+	@Test
 	public void testWithoutCharacter() {
 		
 		String res = GuavaCharMatcher.withoutCharacter("aZas34r");
@@ -22,11 +28,25 @@ public class GuavaCharMatcherTest {
 
 	}
 
+	
+	@Test
+	public void testCountCharacter() {
+		
+		int res = GuavaCharMatcher.countCharacter("aZas34r");
+		assertEquals(res, 5);
+
+	}
+	
 	@Test
 	public void testWithoutASCII() {
 		String res = GuavaCharMatcher.withoutASCII("aÈZas‡4r");
 		assertNotNull(res);
 		assertEquals(res, "È‡");
 	}
-
+	
+	@Test
+	public void testCountASCII() {
+		int res = GuavaCharMatcher.countASCII("aÈZas‡4r");
+		assertEquals(res, 6);
+	}
 }
