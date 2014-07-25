@@ -6,4 +6,14 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>charMatcher</artifactId>
+      <dependencies>
+    <dependency>
+  		<groupId>com.google.guava</groupId>
+  		<artifactId>guava</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+  	</dependency>
+  </dependencies>
 </project>
