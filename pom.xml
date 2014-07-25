@@ -16,6 +16,7 @@
 		<module>multimapBimap</module>
 		<module>preconditions</module>
 		<module>joinerAndSplitter</module>
+		<module>charMatcher</module>
 	</modules>
 	
 	<properties>
