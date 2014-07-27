@@ -49,4 +49,18 @@ public class GuavaCharMatcherTest {
 		int res = GuavaCharMatcher.countASCII("aÈZas‡4r");
 		assertEquals(res, 6);
 	}
+	
+	
+	@Test
+	public void testWithoutFigureAndUpperCase() {
+		String res = GuavaCharMatcher.withoutFigureAndUpperCase("AÈZas‡4r");
+		assertNotNull(res);
+		assertEquals(res, "Èas‡r");
+	}
+	
+	@Test
+	public void testCountFigureUpperCase() {
+		int res = GuavaCharMatcher.countFigureAndUpperCase("AÈZas‡4r");
+		assertEquals(res, 3);
+	}
 }

@@ -32,5 +32,13 @@ public class GuavaCharMatcher {
 	public static int countASCII(String input) {
 		return CharMatcher.ASCII.countIn(input);
 	}
+
 	
+	public static String withoutFigureAndUpperCase(String input) {
+		return CharMatcher.DIGIT.or(CharMatcher.JAVA_UPPER_CASE).removeFrom(input);
+	}
+	
+	public static int countFigureAndUpperCase(String input) {
+		return CharMatcher.DIGIT.or(CharMatcher.JAVA_UPPER_CASE).countIn(input);
+	}
 }
