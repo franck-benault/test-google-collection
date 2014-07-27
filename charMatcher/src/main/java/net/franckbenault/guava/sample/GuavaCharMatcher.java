@@ -14,6 +14,16 @@ public class GuavaCharMatcher {
 		
 		return CharMatcher.DIGIT.countIn(input);
 	}
+
+	public static String replaceFigure(String input, String replace) {
+		
+		return CharMatcher.DIGIT.replaceFrom(input, replace);
+	}
+
+	public static int indexFigure(String input) {
+		
+		return CharMatcher.DIGIT.indexIn(input);
+	}
 	
 	public static String withoutCharacter(String input) {
 		return CharMatcher.JAVA_LETTER.removeFrom(input);

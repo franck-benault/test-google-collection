@@ -20,6 +20,19 @@ public class GuavaCharMatcherTest {
 	}
 	
 	@Test
+	public void testReplaceFigure() {
+		String res = GuavaCharMatcher.replaceFigure("aZas34r", "*");
+		assertEquals(res, "aZas**r");
+	}
+
+	@Test
+	public void testIndexFigure() {
+		int res = GuavaCharMatcher.indexFigure("aZas34r");
+		assertEquals(res, 4);
+	}
+	
+	
+	@Test
 	public void testWithoutCharacter() {
 		
 		String res = GuavaCharMatcher.withoutCharacter("aZas34r");
