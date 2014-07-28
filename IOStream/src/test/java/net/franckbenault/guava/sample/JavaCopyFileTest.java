@@ -13,4 +13,10 @@ public class JavaCopyFileTest {
 		assertTrue(res);
 	}
 
+	@Test
+	public void testCopieFileNotOk() {
+		
+		boolean res = JavaCopyFile.copieFile(".doesnotexist", "target//foo.txt");
+		assertFalse(res);
+	}
 }
