@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class JavaCopyFile {
 
@@ -21,10 +22,30 @@ public class JavaCopyFile {
 			fis = new FileInputStream(fileFrom);
 			fos = new FileOutputStream(fileTo);
 			
+			byte buffer[] = new byte[512*1024];
+			int nb; 
+			while((nb= fis.read(buffer))!=-1) {
+				fos.write(buffer,0,nb);
+			}
+			
 			ok=true;
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		} finally {
+			try {
+				fis.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			try {
+				fos.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		
