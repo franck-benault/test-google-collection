@@ -18,6 +18,7 @@
 		<module>joinerAndSplitter</module>
 		<module>charMatcher</module>
 		<module>IOStream</module>
+		<module>primitifs</module>
 	</modules>
 	
 	<properties>
