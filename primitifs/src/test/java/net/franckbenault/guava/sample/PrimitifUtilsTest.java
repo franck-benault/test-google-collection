@@ -24,5 +24,18 @@ public class PrimitifUtilsTest {
 		assertNotNull(res);
 		assertEquals(res.length,5);
 	}
-
+	
+	@Test
+	public void testGetMin() {
+		double res = PrimitifUtils.getMin();
+	
+		assertTrue(res==1.1);
+	}
+	
+	@Test
+	public void testGetMax() {
+		double res = PrimitifUtils.getMax();
+	
+		assertTrue(res==2.7);
+	}
 }
