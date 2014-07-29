@@ -39,7 +39,6 @@ public class PrimitifUtilsTest {
 		assertTrue(res==2.7);
 	}
 	
-	
 	@Test
 	public void testContains() {
 		assertTrue(PrimitifUtils.contains(1.1));
@@ -47,4 +46,10 @@ public class PrimitifUtilsTest {
 	
 	}
 
+	@Test
+	public void testIndexOf() {
+		assertTrue(PrimitifUtils.indexOf(1.1)==0);
+		assertTrue(PrimitifUtils.indexOf(1.2)==-1);
+	
+	}
 }
