@@ -19,7 +19,10 @@ public class PrimitifUtilsTest {
 
 	@Test
 	public void testInitTabDouble() {
-		//fail("Not yet implemented");
+		double[] res = PrimitifUtils.initTabDouble();
+		
+		assertNotNull(res);
+		assertEquals(res.length,5);
 	}
 
 }

@@ -12,6 +12,6 @@ public class PrimitifUtils {
 	}
 	
 	public static double[] initTabDouble() {
-		return null;
+		return Doubles.toArray(Doubles.asList(1.1, 1.3, 2.2, 2.4, 2.7));
 	}
 }
