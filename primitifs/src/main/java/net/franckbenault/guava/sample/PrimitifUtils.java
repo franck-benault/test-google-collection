@@ -22,5 +22,10 @@ public class PrimitifUtils {
 	public static double getMax() {
 		return Doubles.max(1.1, 1.3, 2.2, 2.4, 2.7);
 	}
+
+	public static boolean contains(double input) {
+		double[] tab =Doubles.toArray(Doubles.asList(1.1, 1.3, 2.2, 2.4, 2.7));
+		return Doubles.contains(tab,input);
+	}
 	
 }

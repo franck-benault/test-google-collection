@@ -38,4 +38,13 @@ public class PrimitifUtilsTest {
 	
 		assertTrue(res==2.7);
 	}
+	
+	
+	@Test
+	public void testContains() {
+		assertTrue(PrimitifUtils.contains(1.1));
+		assertFalse(PrimitifUtils.contains(1.2));
+	
+	}
+
 }
