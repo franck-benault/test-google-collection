@@ -19,6 +19,7 @@
 		<module>charMatcher</module>
 		<module>IOStream</module>
 		<module>primitifs</module>
+		<module>optional</module>
 	</modules>
 	
 	<properties>
