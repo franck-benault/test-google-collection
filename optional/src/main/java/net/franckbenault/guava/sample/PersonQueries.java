@@ -5,6 +5,9 @@ public class PersonQueries {
 	
 	public static Person findByName(String name) {
 		
-		return null;
+		if(name.equals("Sophie")) 
+			return new Person(name);
+		else
+			return null;
 	}
 }
