@@ -36,4 +36,12 @@ public class PersonManagerTest {
 		
 		assertFalse(PersonManager.sendPerson(wrapper));
 	}
+	
+	@Test
+	public void testSendPerson_NotOK_V2() {
+		
+		Optional<Person> wrapperEmpty = Optional.absent();
+		
+		assertFalse(PersonManager.sendPerson(wrapperEmpty));
+	}
 }

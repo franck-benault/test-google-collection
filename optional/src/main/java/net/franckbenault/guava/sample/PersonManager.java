@@ -10,6 +10,7 @@ public class PersonManager {
 			System.out.println("send "+p);
 			return true;
 		} else {
+			System.out.println("nobody to send");
 			return false;
 		}
 	}
