@@ -47,6 +47,43 @@ public class PersonManagerTest {
 
 
 	@Test
+	public void testSendPersonWithDefaultPerson() {
+		
+		Person p = PersonQueries.findByName("Sophie");
+		Optional<Person> wrapper = Optional.absent();
+		if (p!=null) {
+			wrapper = Optional.of(p);
+		} 
+		assertEquals(PersonManager.sendPersonWithDefaultPerson(wrapper).getName(), "Sophie");
+	}
+
+	@Test
+	public void testSendPersonWithDefaultPerson_OK2() {
+		
+		Person p = PersonQueries.findByName("Sophie");
+		Optional<Person> wrapper = Optional.fromNullable(p);
+		
+		assertEquals(PersonManager.sendPersonWithDefaultPerson(wrapper).getName(), "Sophie");
+	}
+	
+	@Test
+	public void testSendPersonWithDefaultPerson_NotOK() {
+		
+		Person p = PersonQueries.findByName("Sophi");
+		Optional<Person> wrapper = Optional.fromNullable(p);
+		
+		assertEquals(PersonManager.sendPersonWithDefaultPerson(wrapper).getName(), PersonManager.DEFAULT_NAME);
+	}
+	
+	@Test
+	public void testSendPersonWithDefaultPerson_NotOK2() {
+		
+		Optional<Person> wrapperEmpty = Optional.absent();
+		
+		assertEquals(PersonManager.sendPersonWithDefaultPerson(wrapperEmpty).getName(), PersonManager.DEFAULT_NAME);
+	}
+	
+	@Test
 	public void testSendPersonV2() {
 		
 		Person p = PersonQueries.findByName("Sophie");
