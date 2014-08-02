@@ -20,7 +20,7 @@ public class PersonManagerTest {
 	}
 
 	@Test
-	public void testSendPerson_OK_V2() {
+	public void testSendPerson_OK2() {
 		
 		Person p = PersonQueries.findByName("Sophie");
 		Optional<Person> wrapper = Optional.fromNullable(p);
@@ -38,10 +38,48 @@ public class PersonManagerTest {
 	}
 	
 	@Test
-	public void testSendPerson_NotOK_V2() {
+	public void testSendPerson_NotOK2() {
 		
 		Optional<Person> wrapperEmpty = Optional.absent();
 		
 		assertFalse(PersonManager.sendPerson(wrapperEmpty));
+	}
+
+
+	@Test
+	public void testSendPersonV2() {
+		
+		Person p = PersonQueries.findByName("Sophie");
+		Optional<Person> wrapper = Optional.absent();
+		if (p!=null) {
+			wrapper = Optional.of(p);
+		} 
+		assertTrue(PersonManager.sendPersonV2(wrapper));
+	}
+
+	@Test
+	public void testSendPersonV2_OK2() {
+		
+		Person p = PersonQueries.findByName("Sophie");
+		Optional<Person> wrapper = Optional.fromNullable(p);
+		
+		assertTrue(PersonManager.sendPersonV2(wrapper));
+	}
+	
+	@Test
+	public void testSendPersonV2_NotOK() {
+		
+		Person p = PersonQueries.findByName("Sophi");
+		Optional<Person> wrapper = Optional.fromNullable(p);
+		
+		assertFalse(PersonManager.sendPersonV2(wrapper));
+	}
+	
+	@Test
+	public void testSendPersonV2_NotOK2() {
+		
+		Optional<Person> wrapperEmpty = Optional.absent();
+		
+		assertFalse(PersonManager.sendPersonV2(wrapperEmpty));
 	}
 }
