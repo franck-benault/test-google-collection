@@ -8,7 +8,7 @@
 	<modules>
 		<module>mod01-collectionInitUtilities</module>
 		<module>mod02-multimapBimap</module>
-		<module>sample1</module>
+		<module>mod03-sample1</module>
 		<module>perf1</module>
 		<module>veryfirstexample</module>
 		<module>simplecache</module>
