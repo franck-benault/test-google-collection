@@ -7,13 +7,13 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>mod01-collectionInitUtilities</module>
+		<module>mod02-multimapBimap</module>
 		<module>sample1</module>
 		<module>sample2</module>
 		<module>perf1</module>
 		<module>veryfirstexample</module>
 		<module>simplecache</module>
 		<module>performanceMesure</module>
-		<module>multimapBimap</module>
 		<module>preconditions</module>
 		<module>joinerAndSplitter</module>
 		<module>charMatcher</module>
