@@ -5,7 +5,7 @@
     <artifactId>test-google-collection</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>preconditions</artifactId>
+  <artifactId>mod04-preconditions</artifactId>
       <dependencies>
     <dependency>
   		<groupId>com.google.guava</groupId>
