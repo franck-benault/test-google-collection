@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.common.primitives.Doubles;
 
-public class PrimitifUtils {
+public class PrimitifDoubleUtils {
 
 	private static double[] tab =Doubles.toArray(Doubles.asList(1.1, 1.3, 2.2, 2.4, 2.7));
 	

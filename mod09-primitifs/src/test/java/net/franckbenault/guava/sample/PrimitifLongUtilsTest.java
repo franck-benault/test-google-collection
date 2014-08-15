@@ -6,11 +6,11 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class PrimitifUtilsTest {
+public class PrimitifLongUtilsTest {
 
 	@Test
 	public void testInitListDouble() {
-		List<Double> res = PrimitifUtils.initListDouble();
+		List<Long> res = PrimitifLongUtils.initListDouble();
 		
 		assertNotNull(res);
 		assertFalse(res.isEmpty());
@@ -19,7 +19,7 @@ public class PrimitifUtilsTest {
 
 	@Test
 	public void testInitTabDouble() {
-		double[] res = PrimitifUtils.initTabDouble();
+		long[] res = PrimitifLongUtils.initTabDouble();
 		
 		assertNotNull(res);
 		assertEquals(res.length,5);
@@ -27,29 +27,29 @@ public class PrimitifUtilsTest {
 	
 	@Test
 	public void testGetMin() {
-		double res = PrimitifUtils.getMin();
+		long res = PrimitifLongUtils.getMin();
 	
-		assertTrue(res==1.1);
+		assertTrue(res==-2);
 	}
 	
 	@Test
 	public void testGetMax() {
-		double res = PrimitifUtils.getMax();
+		long res = PrimitifLongUtils.getMax();
 	
-		assertTrue(res==2.7);
+		assertTrue(res==7);
 	}
 	
 	@Test
 	public void testContains() {
-		assertTrue(PrimitifUtils.contains(1.1));
-		assertFalse(PrimitifUtils.contains(1.2));
+		assertTrue(PrimitifLongUtils.contains(-2));
+		assertFalse(PrimitifLongUtils.contains(8));
 	
 	}
 
 	@Test
 	public void testIndexOf() {
-		assertTrue(PrimitifUtils.indexOf(1.1)==0);
-		assertTrue(PrimitifUtils.indexOf(1.2)==-1);
+		assertTrue(PrimitifLongUtils.indexOf(-1)==0);
+		assertTrue(PrimitifLongUtils.indexOf(8)==-1);
 	
 	}
 }
