@@ -13,13 +13,13 @@
 		<module>mod05-simplecache</module>
 		<module>mod06-joinerAndSplitter</module>
 		
+		<module>mod09-primitifs</module>
 		<module>mod10-optional</module>
 		<module>perf1</module>
 		<module>veryfirstexample</module>
 		<module>performanceMesure</module>
 		<module>charMatcher</module>
 		<module>IOStream</module>
-		<module>primitifs</module>
 	</modules>
 	
 	<properties>
