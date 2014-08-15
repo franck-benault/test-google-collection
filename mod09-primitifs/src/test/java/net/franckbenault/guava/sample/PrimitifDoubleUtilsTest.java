@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class PrimitifLongsTest {
+public class PrimitifDoubleUtilsTest {
 
 	@Test
 	public void testInitListDouble() {
