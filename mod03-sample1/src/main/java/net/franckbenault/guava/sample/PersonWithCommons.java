@@ -3,7 +3,6 @@ package net.franckbenault.guava.sample;
 
 import java.util.Date;
 
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 

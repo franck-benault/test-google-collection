@@ -1,6 +1,5 @@
 package net.franckbenault.guave.sample;
 
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 
