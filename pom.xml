@@ -16,9 +16,11 @@
 		<module>mod08-IOStream</module>
 		<module>mod09-primitifs</module>
 		<module>mod10-optional</module>
+		<module>mod11-performanceMesure</module>
+		
 		<module>perf1</module>
 		<module>veryfirstexample</module>
-		<module>performanceMesure</module>
+
 	</modules>
 	
 	<properties>
