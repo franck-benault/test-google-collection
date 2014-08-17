@@ -10,7 +10,7 @@ public class PrimitifDoubleUtilsTest {
 
 	@Test
 	public void testInitListDouble() {
-		List<Double> res = PrimitifDoubleUtils.initListDouble();
+		List<Double> res = PrimitifDoubleUtils.initList();
 		
 		assertNotNull(res);
 		assertFalse(res.isEmpty());
@@ -19,7 +19,7 @@ public class PrimitifDoubleUtilsTest {
 
 	@Test
 	public void testInitTabDouble() {
-		double[] res = PrimitifDoubleUtils.initTabDouble();
+		double[] res = PrimitifDoubleUtils.initTab();
 		
 		assertNotNull(res);
 		assertEquals(res.length,5);

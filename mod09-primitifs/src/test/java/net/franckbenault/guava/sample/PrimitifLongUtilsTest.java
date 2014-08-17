@@ -9,8 +9,8 @@ import org.junit.Test;
 public class PrimitifLongUtilsTest {
 
 	@Test
-	public void testInitListDouble() {
-		List<Long> res = PrimitifLongUtils.initListDouble();
+	public void testInitListLong() {
+		List<Long> res = PrimitifLongUtils.initList();
 		
 		assertNotNull(res);
 		assertFalse(res.isEmpty());
@@ -18,8 +18,8 @@ public class PrimitifLongUtilsTest {
 	}
 
 	@Test
-	public void testInitTabDouble() {
-		long[] res = PrimitifLongUtils.initTabDouble();
+	public void testInitTabLong() {
+		long[] res = PrimitifLongUtils.initTab();
 		
 		assertNotNull(res);
 		assertEquals(res.length,5);

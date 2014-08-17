@@ -8,11 +8,11 @@ public class PrimitifLongUtils {
 
 	private static long[] tab =Longs.toArray(Longs.asList(-1, 3, -2, 7, 4));
 	
-	public static List<Long> initListDouble() {
+	public static List<Long> initList() {
 		return Longs.asList(-1, 3, -2, 7, 4);
 	}
 	
-	public static long[] initTabDouble() {
+	public static long[] initTab() {
 		return Longs.toArray(Longs.asList(-1, 3, -2, 7, 4));
 	}
 	

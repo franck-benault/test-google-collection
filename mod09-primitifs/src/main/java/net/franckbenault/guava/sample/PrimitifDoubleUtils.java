@@ -8,11 +8,11 @@ public class PrimitifDoubleUtils {
 
 	private static double[] tab =Doubles.toArray(Doubles.asList(1.1, 1.3, 2.2, 2.4, 2.7));
 	
-	public static List<Double> initListDouble() {
+	public static List<Double> initList() {
 		return Doubles.asList(1.1, 1.3, 2.2, 2.4, 2.7);
 	}
 	
-	public static double[] initTabDouble() {
+	public static double[] initTab() {
 		return Doubles.toArray(Doubles.asList(1.1, 1.3, 2.2, 2.4, 2.7));
 	}
 	
