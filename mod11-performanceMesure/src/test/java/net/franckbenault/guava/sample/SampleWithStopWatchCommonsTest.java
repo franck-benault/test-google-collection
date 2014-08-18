@@ -4,11 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class SampleWithStopWatchTest {
+public class SampleWithStopWatchCommonsTest {
 	
 	@Test(timeout=4000)
 	public void testLongProcess() {
-		long elapsedTime = SampleWithStopWatch.longProcess();
+		long elapsedTime = SampleWithStopWatchCommons.longProcess();
 		assertTrue(elapsedTime>0);
 		assertTrue(elapsedTime<3500);
 	}

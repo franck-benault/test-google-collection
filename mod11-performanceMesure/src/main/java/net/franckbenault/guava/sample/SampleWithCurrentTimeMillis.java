@@ -36,7 +36,7 @@ public class SampleWithCurrentTimeMillis {
 		
 		subProcess2();
 		final long date3 = System.currentTimeMillis();
-		System.out.println("subprocess1 "+(date3-date2));
+		System.out.println("subprocess2 "+(date3-date2));
 		
 		return date3-date1;
 		

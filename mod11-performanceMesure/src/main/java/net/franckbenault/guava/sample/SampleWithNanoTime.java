@@ -32,7 +32,7 @@ public class SampleWithNanoTime {
 		
 		subProcess1();
 		final long date2 = System.nanoTime();
-		System.out.println("subprocess1 "+(date2-date1)/ten6);
+		System.out.println("subprocess2 "+(date2-date1)/ten6);
 		
 		subProcess2();
 		final long date3 = System.nanoTime();

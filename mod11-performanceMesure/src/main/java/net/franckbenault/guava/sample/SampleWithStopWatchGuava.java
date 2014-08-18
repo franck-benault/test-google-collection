@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.google.common.base.Stopwatch;
 
-public class SampleWithStopWatch {
+public class SampleWithStopWatchGuava {
 
 
 	
@@ -30,16 +30,16 @@ public class SampleWithStopWatch {
 	}
 	
 	public static long longProcess() {
-		System.out.println("SampleWithStopWatch");
+		System.out.println("SampleWithStopWatchGuava");
 		Stopwatch stopwatch = Stopwatch.createStarted();
 		
 		subProcess1();
 		final long date2 = stopwatch.elapsed(TimeUnit.MILLISECONDS);
-		System.out.println("subprocess1 "+date2);
+		System.out.println("subprocess2 "+date2);
 		
 		subProcess2();
 		final long date3 = stopwatch.elapsed(TimeUnit.MILLISECONDS);
-		System.out.println("subprocess1 "+(date3-date2));
+		System.out.println("subprocess2 "+(date3-date2));
 		
 		return date3;
 		
