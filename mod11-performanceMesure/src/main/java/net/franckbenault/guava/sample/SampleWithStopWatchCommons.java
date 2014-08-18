@@ -1,7 +1,5 @@
 package net.franckbenault.guava.sample;
 
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang3.time.StopWatch;
 
 public class SampleWithStopWatchCommons {
