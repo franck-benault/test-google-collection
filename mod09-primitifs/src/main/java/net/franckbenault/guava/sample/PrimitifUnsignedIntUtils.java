@@ -1,6 +1,5 @@
 package net.franckbenault.guava.sample;
 
-import java.util.List;
 
 import com.google.common.primitives.UnsignedInts;
 

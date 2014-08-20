@@ -2,11 +2,9 @@ package net.franckbenault.guava.sample;
 
 import static org.junit.Assert.*;
 
-import java.util.List;
 
 import org.junit.Test;
 
-import com.google.common.primitives.UnsignedInteger;
 
 public class PrimitifUnsignedIntUtilsTest {
 
